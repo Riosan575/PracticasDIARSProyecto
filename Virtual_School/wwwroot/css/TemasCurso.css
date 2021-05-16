@@ -1,0 +1,43 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: 70px;
+}
+.curso {
+    background-color: #4054B2;
+    height: 350px;
+    width: auto;
+}
+
+p {
+    font-family: quicksand;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.no-seleccionado.list-group-item:hover {
+    background-color: #f1f1f1;
+    color: black;
+    cursor: pointer;
+}
+
+.si-seleccionado {
+    background-color: #f1f1f1;
+    border-bottom-color: blue;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: #514F51;
+    cursor: pointer;
+    font-weight: bold;
+}
+a:hover{
+    color: #514F51;
+}

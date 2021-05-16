@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Login.css">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-sacle=3.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/1c9fcfc148.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>    
+    <form action="/login/login" class="formulario" method="post">
+        <h1>Iniciar Sesión</h1>
+        <div class="contenedor">
+            @if (TempData["AuthMessage"] != null)
+            {
+                <p class="text-danger">@TempData["AuthMessage"]</p>
+            }
+            <div class="input-contendor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="username" placeholder="Usuario" />
+            </div>
+            <div class="input-contendor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name="password" placeholder="Contraseña" />
+            </div>
+            <div>
+                <input type="submit" name="name" value="Iniciar Sesión" class="button" />
+            </div>
+            <p>¿No tienes una cuenta? <a class="link" href="/login/register">Registrarse</a></p>
+        </div>
+    </form>
+</body>
+</html>

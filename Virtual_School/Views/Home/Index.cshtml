@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+        <section class="contenido1">
+            <figure id="imagen1">
+                <img src="https://www.xtrafondos.com/wallpapers/paisaje-digital-en-atardecer-5846.jpg" alt="No hay ps" />
+            </figure>
+            <div class="txt">
+                <h1 class="display-4">Virtual School</h1>
+                <h3 class="m">
+                    ¡Que el aprendizaje nunca sea un obstaculo para conseguir tus sueños!
+                </h3>
+            </div>
+        </section>
+        <section class="contenido2">
+            <div class="linea"><!-- linea--></div>
+            <div class="examen">
+                <a href="#" class="btn-neon">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span>
+                    TOMAR EXAMEN
+                </a>
+                <div class="examentxt">
+                    <p>
+                        En el presente examen, mediremos el nivel de programación en la que te encuentras,
+                        donde habrá una serie de preguntas, tanto como porciones de código de diferentes
+                        lenguajes de programación,
+                        donde deberás desarrollar y elegir la respuesta correcta.
+                    </p>
+                    <img src="https://depor.com/resizer/G3roYuZAOcd120dth76uFFj6EF8=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KWVMQ6W6ZZGQLMRJAEIRTHLB3M.jpg"
+                         height="150" width="220">
+                </div>
+            </div>
+        </section>
+        <section class="linea2"><p>Cursos Online:</p></section>
+        <div class="contenedor">
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel__lista col-11">
+                        @foreach (var item in Model)
+                        {
+                            <div class="carousel__elemento">
+                                <a href="/home/detalle?id=@item.Id"><img src="@item.Caratula" class="pb-3" height="170"></a>
+                                <h4 class="titulo">@item.NombreCurso</h4>
+                                <p class="text-light letras">Por: @item.NombreProfesor</p>
+                                <p class="text-light letras">@item.Detalle</p>
+                            </div>
+                        }
+                    </div>
+                    <button aria-label="Siguiente" class="carousel__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div role="tablist" class="carousel__indicadores"></div>
+
+            </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="~/js/sites.js"></script>
+</body>
+</html>

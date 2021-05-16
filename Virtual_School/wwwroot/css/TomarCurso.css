@@ -1,0 +1,12 @@
+﻿
+.text-light{
+    font-family: 'Footlight MT';
+}
+.centrar{
+    margin-left: 480px;
+}
+.hola {
+   display: inline-block;
+   margin-left: 10px;
+   padding-right: -10px;
+}

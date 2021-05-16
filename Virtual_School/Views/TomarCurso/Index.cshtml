@@ -1,0 +1,43 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/css/TomarCurso.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    @if (TempData["Error"] != null)
+    {
+        <h1 class="text-light text-center pt-5">@TempData["Error"]</h1>
+    }
+    else if (TempData["Inscrito"] != null)
+    {
+        <h1 class="text-light text-center pt-5">@TempData["Inscrito"]</h1>
+    }
+    @*<h1 class="text-light text-center pt-5">Haz Tomado el curso Satisfactoriamente</h1>
+            <div class="centrar">
+                @foreach (var item in ViewBag.curso)
+                    {
+                        <div class="container hola" style="width: 18rem;">
+                            <div class="card-group mt-3">
+                                <div class="card text-left border-info">
+                                    <div class="card-body">
+                                        <img src="@item.Caratula" class="card-img-top" alt="...">
+                                        <h4 class="card-title">@item.NombreCurso</h4>
+                                        <p class="card-text">Por: @item.NombreProfesor</p>
+                                        <p class="card-text">@item.Detalle</p>
+                                        <a href="#" class="btn btn-primary">Entrar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+        </div>*@
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>

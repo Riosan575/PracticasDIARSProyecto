@@ -1,0 +1,29 @@
+﻿
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="/css/TomarCurso.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <br />
+    <h1 class="pt-5 text-center text-light">MIS CURSOS INSCRITOS</h1>
+    @foreach (var item in ViewBag.tomarcurso)
+        {
+            <div class="container hola" style="width: 18rem;">
+                <div class="card-group mt-3">
+                    <div class="card text-left border-info">
+                        <div class="card-body">
+                            <img src="@item.Cursos.Caratula" class="card-img-top" alt="...">
+                            <h4 class="card-title">@item.Cursos.NombreCurso</h4>
+                            <p class="card-text">Por: @item.Cursos.NombreProfesor</p>
+                            <p class="card-text">@item.Cursos.Detalle</p>
+                            <a href="/cursotemas/index?id=@item.Cursos.Id" class="btn btn-danger">Iniciar Curso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+</body>
+</html>

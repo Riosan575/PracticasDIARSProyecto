@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="~/css/Register.css">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-sacle=3.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/1c9fcfc148.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <br />
+    <br />
+    <form action="/login/register" class="formulario" method="post">
+        <h1>Registrate</h1>
+        <div class="contenedor">
+            <div class="input-contendor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="usuario" value="@Model.Usuario" placeholder="Usuario" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Usuario")</span>
+            <div class="input-contendor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" name="correo" value="@Model.Correo" placeholder="Correo" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Correo")</span>
+            <div class="input-contendor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name="contraseña" placeholder="Contraseña" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("Contraseña")</span>
+            <div class="input-contendor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name="verfcontraseña" placeholder="Verificar Contraseña" />
+            </div>
+            <span class="text-danger">@Html.ValidationMessage("VerfContraseña")</span>
+            <div>
+                <input type="submit" name="name" value="Registrarse" class="button" />
+            </div>
+            <p>Al registrarte, aceptas nuestras Condiciones y uso de Políticas de Privacidad</p>
+            <p>¿Ya tienes cuenta? <a class="link" href="/login/login">Iniciar Sesión</a></p>
+        </div>
+    </form>
+</body>
+</html>

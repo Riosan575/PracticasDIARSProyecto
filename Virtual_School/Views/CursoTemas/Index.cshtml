@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <link href="/css/TemasCurso.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="mh-max bg-dark">
+        <div class="row">
+            <div class="col-7 pt-3">
+                <div class="embed-responsive embed-responsive-21by9">
+                    @foreach (var item in Model)
+                    {
+                        <iframe id="quitar1" muted paused class="video embed-responsive-item" width="730" height="430"
+                                src="@item.Videos">
+                        </iframe>
+                        <iframe muted paused id="quitar" class="video embed-responsive-item" width="730" height="430" hidden
+                                src="@item.Video1">
+                        </iframe>
+                    }
+                </div>
+            </div>
+            <div class="col-5">
+                <!-- bootstrap 5 Accordion -->
+
+                <div class="accordion pt-3" id="accordionExample">
+                    <div class="accordion-item">
+                        @foreach (var item in ViewBag.Seccion)
+                        {
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <b>@item.Seccions.Secciones: @item.TemaSeccions</b>
+                                </button>
+                            </h2>
+                        }
+
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="card" style="width: 30rem;">
+                                    <div class="list-group list-group-flush">
+                                        <a id="uno" class="list-group-item no-seleccionado">1. Capacitación completa PASO a PASO</a>
+                                        <a id="dos" class="list-group-item no-seleccionado">2. Grupos de nicho en Facebook</a>
+                                        <a class="list-group-item no-seleccionado">3. Plataformas de conversación en línea y Foros de nicho específicos (Reddit.com)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <b>Sección 2: </b>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the
+                                showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the
+                                transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the
+                                showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the
+                                transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+        <script>
+            var $link = $("#uno");
+            var $list23 = $('#uno');
+            $list23.attr("class", "list-group-item si-seleccionado");
+            $link.click(function () {
+                var $li = $('#quitar1');
+                $li.removeAttr("hidden");
+
+                var $lis = $("#uno");
+                $lis.attr("class", "list-group-item si-seleccionado")
+
+                var $li2 = $('#quitar');
+                $li2.attr("hidden", "hidden");
+
+                var $list2 = $('#dos');
+                $list2.attr("class", "list-group-item no-seleccionado");
+            });
+            var $link = $("#dos");
+            $link.click(function () {
+                var $li = $('#quitar');
+                $li.removeAttr("hidden");
+
+                var $lis = $("#dos");
+                $lis.attr("class", "list-group-item si-seleccionado")
+
+                var $li2 = $('#quitar1');
+                $li2.attr("hidden", "hidden")
+
+                var $list2 = $('#uno');
+                $list2.attr("class", "list-group-item no-seleccionado");
+
+            }); 
+            //var $link = $("#uno");
+            //$link.attr("class", "list-group-item si-seleccionado");
+            //$link.click(function () {
+            //    var $this = $(this);
+            //    var $iframe = $this.closest('body');
+            //    var $ul = $iframe.find('.video'); 
+            //    $ul.removeAttr("hidden");
+
+            //    $this = $("#uno");
+            //    $this.attr("class", "list-group-item si-seleccionado")
+
+            //    $this = $('.video');
+            //    $this.attr("hidden", "hidden");
+
+            //    var $list2 = $('#uno');
+            //    $list2.attr("class", "list-group-item no-seleccionado");
+
+            //    //DOS
+
+            //});
+            //var $link = $("#uno");
+            //    $link.click(function () {
+            //        var $li = $('#quitar');
+            //        $li.removeAttr("hidden");
+
+            //        var $lis = $("#dos");
+            //        $lis.attr("class", "list-group-item si-seleccionado")
+
+            //        var $li2 = $('#quitar1');
+            //        $li2.attr("hidden", "hidden")
+
+            //        var $list2 = $('#uno');
+            //        $list2.attr("class", "list-group-item no-seleccionado");
+
+            //    });
+            
+        </script>
+    }
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </body>
+
+</html>

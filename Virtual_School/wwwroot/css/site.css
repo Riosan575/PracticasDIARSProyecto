@@ -1,0 +1,588 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: condensed 150% sans-serif;
+}
+
+body {
+    background-color: #1D1B1A;
+    background-repeat: no-repeat;
+    background-size: 130vw 150vh;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 4)
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+    .container .btn-menu, .logo {
+        float: left;
+        line-height: 73px;
+    }
+
+        .container .btn-menu label {
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            font-size: 30px;
+            margin-left: -85px;
+            margin-top: -5px;
+        }
+
+        .logo h1 {
+            color: rgb(165, 165, 165);
+            font-size: 30px;
+            margin-left: 10px;
+            font-family: fantasy;
+            margin-left: -40px;
+            line-height: 5px;
+            font-weight: 300;
+        }
+
+    .container .menu {
+        float: right;
+    }
+        /*registrarse y login*/
+        .container .menu a {
+            margin-top: 15px;
+            margin-left: 0px;
+            display: inline-block;
+            padding: 10px 50px;
+            line-height: 20px;
+            text-decoration: none;
+            color: rgb(165, 165, 165);
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+            margin-right: -60px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+            .container .menu a.register {
+                margin-right: 5px;
+            }
+
+            .container .menu a:hover {
+                background-color: #ffffff18;
+                border-radius: 80px;
+                border-bottom: 1.5px solid #ffffff77;
+            }
+/*De aqui el menu desplegable*/
+
+#header1 {
+    float: left;
+    line-height: 40px;
+    border: 0px;
+    width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li a {
+    background: none;
+    border: none;
+    padding: 1px 30px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+}
+
+    .nav li a:hover {
+        background-color: #ffffff18;
+        border-radius: 80px;
+        border-bottom: 1.5px solid #ffffff77;
+        padding-bottom: 2px;
+    }
+
+.lista {
+    background-color: rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.nav li ul {
+    text-align: left;
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    margin-left: 40px;
+    margin-top: 3px;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+.nav li ul li {
+    position: relative;
+}
+    /*cambiar la distancia entre lista y sublista*/
+    .nav li ul li ul {
+        right: -178px;
+        top: 0px;
+    }
+/*termine :v*/
+
+.sublista {
+    background-color: rgba(255, 255, 255, 0.267);
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+#categoria {
+    padding: 0px 90px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    margin-top: 15px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+}
+
+    #categoria:hover {
+        background-color: #ffffff18;
+        border-radius: 80px;
+        border-bottom: 1.5px solid #ffffff77;
+        padding-bottom: 2px;
+    }
+/*buscaodr*/
+.buscador {
+    float: left;
+    width: 315px;
+    height: 46px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.048);
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-top: -44px;
+    margin-left: 330px;
+}
+
+    .buscador input {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        padding: 10px 0px;
+        font-size: 16px;
+        text-align: left;
+        outline: none;
+        color: rgb(182, 182, 182)
+    }
+
+    .buscador label {
+        text-indent: 10px;
+        color: rgb(163, 163, 163);
+    }
+
+main .contenido1 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: 90px;
+    justify-content: center;
+}
+/* aca termina el emcabezado*/
+/*imagen 1*/
+#imagen1 {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: -20px;
+}
+
+    #imagen1 img {
+        width: 1800px;
+        height: 600px;
+        transition: 2s;
+        position: relative;
+    }
+
+        #imagen1 img:hover {
+            transform: translateX(-10%);
+            filter: brightness(80%);
+        }
+
+.txt {
+    text-align: left;
+    position: absolute;
+    margin-left: 100px;
+    color: white;
+    white-space: pre-line;
+    transition: 0.75s;
+    margin-top: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1px;
+}
+
+.m {
+    margin-top: -50px;
+}
+
+.letras {
+    text-align: left;
+    white-space: pre-line;
+}
+
+.titulo {
+    text-align: left;
+    color: #D5B8B2;
+    white-space: pre-line;
+}
+
+.txt:hover {
+    transform: scale(1.12);
+    color: #CEBFBB;
+}
+
+#imagen1 img:hover {
+    transform: translateX(-20%);
+    filter: brightness(80%);
+}
+
+/*aqui termina la imagen y texto de arriba*/
+
+.contenido2 .linea {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    top: -100px;
+    left: 0;
+    background-color: #131313;
+    z-index: 2;
+}
+/*-------------------------------------------boton luminoso------------------------------------------------------*/
+.examen {
+    position: relative;
+    top: -400px;
+    text-align: center;
+    z-index: 3;
+    text-decoration: none;
+}
+
+.btn-neon {
+    position: relative;
+    display: inline-block;
+    padding: 15px 380px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.123);
+}
+
+    .btn-neon:hover {
+        background: #ffffff;
+        box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+        transition-delay: 1s;
+        color: rgb(85, 85, 85);
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .btn-neon span {
+        position: absolute;
+        display: block;
+    }
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#ffffff);
+}
+
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#ffffff);
+}
+
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#ffffff);
+}
+
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#ffffff);
+}
+
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/*-----------------------------------------Aca termina el boton-------------------------------------------*/
+/*texto debajo del boton*/
+.examentxt {
+    text-align: left;
+    padding: 0px 50px;
+    margin-right: 400px;
+    position: absolute;
+    color: white;
+    line-height: 36px;
+    transition: 1s;
+    margin-top: 20px;
+    left: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 0px 30px;
+}
+
+    .examentxt img {
+        float: right;
+        margin-top: -165px;
+        margin-right: -250px;
+    }
+
+.linea2 p {
+    text-align: left;
+    margin-right: 0px;
+    position: absolute;
+    color: white;
+    line-height: 10px;
+    margin-top: -70px;
+    left: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: 7px;
+}
+
+.contenido3 .Cursos {
+    display: block;
+    border: 1px solid rgb(131, 131, 131);
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 345px;
+    margin-bottom: 50px;
+}
+
+.Cursos img {
+    float: left;
+}
+
+.Cursos p {
+    display: block;
+    margin-left: 440px;
+    margin-right: 20px;
+}
+
+    .Cursos p.curso1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        color: rgb(221, 221, 221);
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    .Cursos p.relleno {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 19px;
+        color: rgb(145, 145, 145);
+    }
+
+        .Cursos p.relleno a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+.Cursos .inscribirse, .Cursos .informacion {
+    margin-left: 200px;
+    text-decoration: none;
+    border: 1px solid rgb(117, 117, 117);
+    padding: 10px 20px;
+    border-radius: 5px;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.Cursos .inscribirse {
+    margin-right: -180px;
+}
+
+/* --- --- CAROUSEL --- --- */
+.carousel__contenedor {
+    position: relative;
+}
+
+.carousel__anterior {
+    position: absolute;
+    display: block;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    opacity: 20%;
+    color: #fff;
+}
+
+.carousel__siguiente {
+    position: absolute;
+    display: block;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    opacity: 20%;
+    color: #fff;
+}
+
+.carousel__anterior:hover {
+    opacity: 100%;
+}
+
+.carousel__siguiente:hover {
+    opacity: 100%;
+}
+
+.carousel__lista {
+    overflow: hidden;
+}
+
+.carousel__elemento {
+    text-align: center;
+    margin: 16px;
+}
+
+.carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+    border-radius: 0;
+}
+
+    .carousel__indicadores .glider-dot:hover {
+        opacity: .5;
+    }
+
+    .carousel__indicadores .glider-dot.active {
+        opacity: 1;
+    }
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 40px 0;
+    }
+
+    .contenido-principal {
+        flex-direction: column;
+    }
+
+        .contenido-principal > * {
+            width: 100%;
+        }
+}
+
+.rounded {
+    height: 400px;
+    margin-top: -280px;
+    left: 350px;
+}
+
+.color {
+    color: white;
+    margin: 30px;
+}
+
+.textarea {
+    margin-right: 500px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.salto {
+    white-space: pre-line;
+}
+/*USER*/
+.perfilUser{
+    margin-left: 1030px;
+    padding-top: 20px;
+    color: white;
+}
