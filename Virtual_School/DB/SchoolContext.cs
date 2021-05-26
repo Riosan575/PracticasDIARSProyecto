@@ -18,6 +18,7 @@ namespace Virtual_School.DB
         public DbSet<Comentarios> Coments { get; set; }
         public DbSet<Seccion> Seccions { get; set; }
         public DbSet<TemaSeccion> temaSeccions { get; set; }
+        public DbSet<TemaContenido> TemaContenidos { get; set; }
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,6 +33,7 @@ namespace Virtual_School.DB
             modelBuilder.ApplyConfiguration(new ComentarioMap());
             modelBuilder.ApplyConfiguration(new SeccionMap());
             modelBuilder.ApplyConfiguration(new TemaSeccionMap());
+            modelBuilder.ApplyConfiguration(new TemaContenidoMap());
         }
     }
 }

@@ -9,8 +9,9 @@ namespace Virtual_School.Models
     {
         public int Id { get; set; }
         public string Videos { get; set; }
-        public string Video1 { get; set; }
         public int CursoId { get; set; }
+        public int IdTemaContent { get; set; }
         public Curso Cursos { get; set; }
+        public TemaContenido temaContent { get; set; }
     }
 }

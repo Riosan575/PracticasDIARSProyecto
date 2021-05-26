@@ -18,7 +18,7 @@ namespace Virtual_School.Controllers
             _context = context;
         }
         [Authorize]
-        public IActionResult Index(int id)
+        public IActionResult Index()
         {
             //var claim = HttpContext.User.Claims.First();
             //string username = claim.Value;

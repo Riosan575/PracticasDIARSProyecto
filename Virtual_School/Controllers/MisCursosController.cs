@@ -24,6 +24,7 @@ namespace Virtual_School.Controllers
             string username = claim.Value;
             var user = _context.Accounts.First(o => o.Usuario == username);
             ViewBag.tomarcurso = _context.TomarCursos.Include("Cursos").Where(o => o.IdUsuario == user.Id).ToList();
+
             return View();
         }
     }

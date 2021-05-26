@@ -8,20 +8,20 @@ using Virtual_School.Models;
 
 namespace Virtual_School.DB.Mapping
 {
-    public class TemasMap: IEntityTypeConfiguration<Temas>
+    public class TemaContenidoMap : IEntityTypeConfiguration<TemaContenido>
     {
-        public void Configure(EntityTypeBuilder<Temas> builder)
+        public void Configure(EntityTypeBuilder<TemaContenido> builder)
         {
-            builder.ToTable("Temas");
+            builder.ToTable("TemaContenido");
             builder.HasKey(o => o.Id);
 
-            builder.HasOne(o => o.Cursos)
+            builder.HasOne(o => o.Tems)
                 .WithMany()
-               .HasForeignKey(o => o.CursoId);
+                .HasForeignKey(o => o.IdTemaSeccion);
 
-            builder.HasOne(o => o.temaContent)
+            builder.HasOne(o => o.Secciones)
                 .WithMany()
-               .HasForeignKey(o => o.IdTemaContent);
+                .HasForeignKey(o => o.IdSecciones);
         }
     }
 }
